@@ -8,6 +8,8 @@ def histogram(data):
       axes[i-1].hist(data[col])
       axes[i-1].set_title(col)
         
+def fraud_category(data):
+  return data.groupby('FraudResult')['FraudResult'].count()
         
 
 
